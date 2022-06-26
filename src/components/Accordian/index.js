@@ -6,7 +6,10 @@ import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Tag from '../../Assets/Tag.png';
 
-//Idea: accordian of accordians by week!
+//Idea: accordian of accordians by week! DONE
+//Idea: In NotesForm, change the route in the backend so that if someone
+//Goes and submits a note for a week+day that they already have one, it
+//appends to the end of hte note rather than makes a new one.
 export default function SimpleAccordion(props) {
   let filteredArr = [];
   for (let i = 1; i <= 16; i++) {
