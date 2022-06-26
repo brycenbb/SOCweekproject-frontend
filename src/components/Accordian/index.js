@@ -18,7 +18,10 @@ export default function SimpleAccordion(props) {
 
   return (
     <main id="allNotesContainer">
-      {filteredArr.map((itemArr, index) => {
+      {filteredArr.map(function (itemArr, index) {
+        if (itemArr.length === 0) {
+          return;
+        }
         return (
           <Accordion key={index}>
             <AccordionSummary
