@@ -15,7 +15,6 @@ export default function SimpleAccordion(props) {
   for (let i = 1; i <= 16; i++) {
     filteredArr.push(props.arr.filter((obj) => obj.week === i));
   }
-  console.log(filteredArr);
 
   return (
     <main id="allNotesContainer">
@@ -68,79 +67,6 @@ export default function SimpleAccordion(props) {
           </Accordion>
         );
       })}
-
-      {/* {props.arr.map((item, index) => {
-        return (
-          <Accordion key={index}>
-            <AccordionSummary
-              sx={{ border: '1px solid #181e50' }}
-              expandIcon={<ExpandMoreIcon />}
-              aria-controls={`panel${index}a-content`}
-              id={`panel${index}a-header`}
-            >
-              <Typography>
-                Week: {item.week} Day: {item.day}
-              </Typography>
-            </AccordionSummary>
-            <AccordionDetails className="accordNote">
-              <Typography>{item.note}</Typography>
-              <ol className="tagList">
-                {item.tags.map((item, index) => {
-                  return (
-                    <li key={index}>
-                      <img alt="tag" className="imageTag" src={Tag}></img>
-                      {item}
-                    </li>
-                  );
-                })}
-              </ol>
-            </AccordionDetails>
-          </Accordion>
-        );
-      })} */}
-      {/* Line above this is the end of the props.arr.map {} */}
     </main>
-    //THIS IS THEIR CODE BELOW
-    // <div>
-    //   <Accordion>
-    //     <AccordionSummary
-    //       expandIcon={<ExpandMoreIcon />}
-    //       aria-controls="panel1a-content"
-    //       id="panel1a-header"
-    //     >
-    //       <Typography>Accordion 1</Typography>
-    //     </AccordionSummary>
-    //     <AccordionDetails>
-    //       <Typography>
-    //         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-    //         malesuada lacus ex, sit amet blandit leo lobortis eget.
-    //       </Typography>
-    //     </AccordionDetails>
-    //   </Accordion>
-    //   <Accordion>
-    //     <AccordionSummary
-    //       expandIcon={<ExpandMoreIcon />}
-    //       aria-controls="panel2a-content"
-    //       id="panel2a-header"
-    //     >
-    //       <Typography>Accordion 2</Typography>
-    //     </AccordionSummary>
-    //     <AccordionDetails>
-    //       <Typography>
-    //         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-    //         malesuada lacus ex, sit amet blandit leo lobortis eget.
-    //       </Typography>
-    //     </AccordionDetails>
-    //   </Accordion>
-    //   <Accordion disabled>
-    //     <AccordionSummary
-    //       expandIcon={<ExpandMoreIcon />}
-    //       aria-controls="panel3a-content"
-    //       id="panel3a-header"
-    //     >
-    //       <Typography>Disabled Accordion</Typography>
-    //     </AccordionSummary>
-    //   </Accordion>
-    // </div>
   );
 }
