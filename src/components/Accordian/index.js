@@ -13,15 +13,16 @@ export default function SimpleAccordion(props) {
         return (
           <Accordion key={index}>
             <AccordionSummary
+              sx={{ border: '1px solid #181e50' }}
               expandIcon={<ExpandMoreIcon />}
               aria-controls={`panel${index}a-content`}
               id={`panel${index}a-header`}
             >
               <Typography>
-                W{item.week}D{item.day}
+                Week: {item.week} Day: {item.day}
               </Typography>
             </AccordionSummary>
-            <AccordionDetails>
+            <AccordionDetails className="accordNote">
               <Typography>{item.note}</Typography>
               <ol className="tagList">
                 {item.tags.map((item, index) => {

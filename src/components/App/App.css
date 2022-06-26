@@ -4,7 +4,9 @@
   --soclightblue: #4a90e2;
   --socwhite: #f7f7f7;
 }
-
+* {
+  box-sizing: border-box;
+}
 /* -----------------------------------App--------------------------------------- */
 
 .App {
@@ -22,6 +24,12 @@
   justify-self: center;
   margin: 0 auto;
   padding: 1rem 0;
+}
+.MuiAccordion-region {
+  background-color: var(--socgreen);
+}
+.MuiButtonBase-root {
+  background-color: var(--socblue);
 }
 #logoutBtn,
 #loginBtn {
