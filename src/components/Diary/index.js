@@ -4,6 +4,8 @@ import Tag from '../../Assets/Tag.png';
 import SimpleAccordion from '../Accordian';
 import { useAuth0 } from '@auth0/auth0-react';
 
+//Bug: tags in new entries are not showing
+//please
 // import NotesForm from '../NotesForm/index.js';
 /*Props: user{email} -> Email used to locate the users notes in the server */
 function Diary(props) {
