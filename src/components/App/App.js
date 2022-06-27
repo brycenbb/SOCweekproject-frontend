@@ -6,7 +6,6 @@ import ProtectedRoute from '../ProtectedRoute';
 import Home from '../Home/index.js';
 import Diary from '../Diary';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { useState } from 'react';
 
 /*
   This component serves all of the routes of the application. It keeps track of if a user is logged 
