@@ -6,14 +6,16 @@
 import TextField from '@mui/material/TextField';
 import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
-import InputLabel from '@mui/material/InputLabel';
+// import InputLabel from '@mui/material/InputLabel';
 import { useState } from 'react';
 import Button from '@mui/material/Button';
+import { useAuth0 } from '@auth0/auth0-react';
 
-export default function NotesForm(props) {
+export default function NotesForm() {
   //Form submission function that reads each input type and adds it to the object to be sent to the server if needed.
   //state keeping track of topic dropdown values
   const [topicValue, setTopicValue] = useState('');
+  const { user } = useAuth0();
 
   //function changing topicValue when dropdown value changes
   function handleDropdownChange(e) {
@@ -93,7 +95,7 @@ export default function NotesForm(props) {
     }
 
     //All elements have been searched, ready to post the data to the server and database.
-    await fetch(`http://localhost:3001/notes?email=${props.email}`, {
+    await fetch(`http://localhost:3001/notes?email=${user.email}`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -111,8 +113,7 @@ export default function NotesForm(props) {
       });
     }
     if (document.getElementById('happy-to-help-input').checked) {
-      console.log('woohoo');
-      await fetch(`http://localhost:3001/help?email=${props.email}`, {
+      await fetch(`http://localhost:3001/help?email=${user.email}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -143,13 +144,11 @@ export default function NotesForm(props) {
               <TextField
                 label="Week:"
                 variant="outlined"
+                inputProps={{ min: '1', max: '16', step: '1' }}
                 size="small"
-                sx={{ width: '15%', backgroundColor: 'white' }}
+                sx={{ width: '20%', backgroundColor: 'white' }}
                 type="number"
                 id="week-input"
-                min={1}
-                max={16}
-                step={1}
                 required
               ></TextField>
             </div>
@@ -158,7 +157,8 @@ export default function NotesForm(props) {
                 label="Day:"
                 variant="outlined"
                 size="small"
-                sx={{ width: '15%', backgroundColor: 'white' }}
+                inputProps={{ min: '1', max: '5', step: '1' }}
+                sx={{ width: '20%', backgroundColor: 'white' }}
                 id="day-input"
                 type="number"
                 min={1}
