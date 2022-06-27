@@ -6,7 +6,7 @@
 import TextField from '@mui/material/TextField';
 import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
-import InputLabel from '@mui/material/InputLabel';
+// import InputLabel from '@mui/material/InputLabel';
 import { useState } from 'react';
 import Button from '@mui/material/Button';
 import { useAuth0 } from '@auth0/auth0-react';
@@ -144,13 +144,11 @@ export default function NotesForm(props) {
               <TextField
                 label="Week:"
                 variant="outlined"
+                inputProps={{ min: '1', max: '16', step: '1' }}
                 size="small"
                 sx={{ width: '15%', backgroundColor: 'white' }}
                 type="number"
                 id="week-input"
-                min={1}
-                max={16}
-                step={1}
                 required
               ></TextField>
             </div>
@@ -159,6 +157,7 @@ export default function NotesForm(props) {
                 label="Day:"
                 variant="outlined"
                 size="small"
+                inputProps={{ min: '1', max: '16', step: '1' }}
                 sx={{ width: '15%', backgroundColor: 'white' }}
                 id="day-input"
                 type="number"
