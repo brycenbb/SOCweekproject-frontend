@@ -146,7 +146,7 @@ export default function NotesForm(props) {
                 variant="outlined"
                 inputProps={{ min: '1', max: '16', step: '1' }}
                 size="small"
-                sx={{ width: '15%', backgroundColor: 'white' }}
+                sx={{ width: '20%', backgroundColor: 'white' }}
                 type="number"
                 id="week-input"
                 required
@@ -157,8 +157,8 @@ export default function NotesForm(props) {
                 label="Day:"
                 variant="outlined"
                 size="small"
-                inputProps={{ min: '1', max: '16', step: '1' }}
-                sx={{ width: '15%', backgroundColor: 'white' }}
+                inputProps={{ min: '1', max: '5', step: '1' }}
+                sx={{ width: '20%', backgroundColor: 'white' }}
                 id="day-input"
                 type="number"
                 min={1}

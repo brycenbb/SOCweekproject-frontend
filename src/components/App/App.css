@@ -478,9 +478,13 @@ a:hover {
 }
 #day-field {
   width: 100%;
+  display: flex;
+  justify-content: center;
 }
 #week-field {
   width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 #tags-field {
