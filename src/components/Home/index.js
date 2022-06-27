@@ -17,7 +17,7 @@ import { useAuth0 } from '@auth0/auth0-react';
 function Home() {
   const [newUser, setNewUser] = useState(false);
   const [slack, setSlackName] = useState('');
-  const { user, isAuthenticated, isLoading } = useAuth0();
+  const { user, isLoading } = useAuth0();
 
   //UseEffect to determine if a user has a slackusername present in the database and if not starts the process of prompting them to do so.
   useEffect(() => {

@@ -17,7 +17,7 @@ function Panic3({ state }) {
       setHelpers(dataArr);
     }
     fetchHelpers();
-  }, []);
+  }, [state.topic]);
   console.log('hi', helpers);
   return (
     <main
