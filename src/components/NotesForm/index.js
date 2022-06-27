@@ -11,7 +11,7 @@ import { useState } from 'react';
 import Button from '@mui/material/Button';
 import { useAuth0 } from '@auth0/auth0-react';
 
-export default function NotesForm(props) {
+export default function NotesForm() {
   //Form submission function that reads each input type and adds it to the object to be sent to the server if needed.
   //state keeping track of topic dropdown values
   const [topicValue, setTopicValue] = useState('');

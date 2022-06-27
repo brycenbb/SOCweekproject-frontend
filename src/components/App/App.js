@@ -30,9 +30,7 @@ function App() {
         ></Route>
         <Route
           path="/settings"
-          element={
-            <ProtectedRoute user={user} component={Settings}></ProtectedRoute>
-          }
+          element={<ProtectedRoute component={Settings}></ProtectedRoute>}
         ></Route>
         <Route
           path="/diary"
