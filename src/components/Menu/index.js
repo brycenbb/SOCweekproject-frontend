@@ -29,7 +29,7 @@ function Menu() {
       <CircleMenuItem
         sx={{ width: 'fit-content' }}
         onClick={() => (window.location.href = '/settings')}
-        tooltip="Email"
+        tooltip="Settings"
         tooltipPlacement={TooltipPlacement.Right}
       >
         Settings
@@ -39,7 +39,7 @@ function Menu() {
         onClick={() => {
           window.location.href = '/resources';
         }}
-        tooltip="Help"
+        tooltip="Resources"
       >
         Resources
       </CircleMenuItem>
@@ -48,7 +48,7 @@ function Menu() {
         onClick={() => {
           window.location.href = '/diary';
         }}
-        tooltip="Location"
+        tooltip="Diary"
       >
         Diary
       </CircleMenuItem>
@@ -57,7 +57,7 @@ function Menu() {
         onClick={() => {
           window.location.href = '/';
         }}
-        tooltip="Info"
+        tooltip="Home"
       >
         Home
       </CircleMenuItem>

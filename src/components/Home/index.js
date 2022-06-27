@@ -53,7 +53,6 @@ function Home() {
   return (
     <div className="App">
       <Header />
-      <Menu />
       {!user && <LoginButton />}
       {islogged && <p className="centerMe">Hero's Journey Progress</p>}
       {islogged && <ProgressBar />}
