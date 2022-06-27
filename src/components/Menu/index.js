@@ -14,10 +14,10 @@ function Menu() {
   return (
     <CircleMenu
       className="circleMenu"
-      startAngle={0}
-      rotationAngle={240}
+      startAngle={-15}
+      rotationAngle={150}
       itemSize={3}
-      radius={6}
+      radius={7}
       /**
        * rotationAngleInclusive (default true)
        * Whether to include the ending angle in rotation because an
@@ -38,7 +38,7 @@ function Menu() {
       </CircleMenuItem>
       <CircleMenuItem
         className="linkparent"
-        tooltipPlacement={TooltipPlacement.Bottom}
+        tooltipPlacement={TooltipPlacement.Right}
         sx={{ width: 'fit-content' }}
         // onClick={() => {
         //   window.location.href = '/resources';
@@ -64,7 +64,7 @@ function Menu() {
       </CircleMenuItem>
       <CircleMenuItem
         className="linkparent"
-        tooltipPlacement={TooltipPlacement.Left}
+        tooltipPlacement={TooltipPlacement.Bottom}
         sx={{ width: 'fit-content' }}
         // onClick={() => {
         //   window.location.href = '/';
