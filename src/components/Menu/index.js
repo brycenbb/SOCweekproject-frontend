@@ -1,7 +1,7 @@
 // import MailIcon from '@material-ui/icons/Mail';
 // import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
 // import MapIcon from '@material-ui/icons/Map';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 // Import the circular menu
 import {
@@ -36,12 +36,12 @@ function Menu() {
       </CircleMenuItem>
       <CircleMenuItem
         sx={{ width: 'fit-content' }}
-        onClick={() => {
-          window.location.href = '/resources';
-        }}
+        // onClick={() => {
+        //   window.location.href = '/resources';
+        // }}
         tooltip="Resources"
       >
-        Resources
+        <Link to="/resources">Resources</Link>
       </CircleMenuItem>
       <CircleMenuItem
         sx={{ width: 'fit-content' }}
