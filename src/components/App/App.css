@@ -21,7 +21,6 @@
 }
 #allNotesContainer {
   width: 80%;
-  height: 100%;
   justify-self: center;
   margin: 0 auto;
   padding: 1rem 0;
@@ -49,7 +48,7 @@
   width: auto;
   background-color: var(--socblue);
   align-items: center;
-  /* justify-content: flex-end; */
+  justify-content: flex-end;
 }
 
 .homeLink {
@@ -118,7 +117,7 @@
 
 /* -------------------------------------resources------------------------------- */
 #usernameInput::placeholder {
-  color: var(--socblue);
+  color: var(--soclightblue);
 }
 #usernameInput > * {
   color: var(--soclightblue);
@@ -152,20 +151,7 @@
 #topic-filter-butt {
   margin-top: 0.8rem;
 }
-/* .linkparent {
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: auto 0;
-} */
-.linkgrow {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-}
+
 .rectangleHeader {
   display: flex;
   align-items: center;
@@ -281,6 +267,10 @@
 textarea {
   max-width: 20rem;
   max-height: 20rem;
+}
+.navbar {
+  display: flex;
+  justify-content: space-around;
 }
 
 #settingsMain {
@@ -488,19 +478,11 @@ a:hover {
 }
 #day-field {
   width: 100%;
-  display: flex;
-  justify-content: center;
 }
 #week-field {
   width: 100%;
-  display: flex;
-  justify-content: center;
 }
-.circleMenu {
-  /* margin: 0 auto; */
-  margin-left: 2rem;
-  transform: scale(1.2);
-}
+
 #tags-field {
   width: 100%;
   display: flex;
