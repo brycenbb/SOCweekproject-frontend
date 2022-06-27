@@ -1,38 +1,42 @@
 import { useEffect, useState } from 'react';
 import Header from '../Header';
-import Tag from '../../Assets/Tag.png';
+// import Tag from '../../Assets/Tag.png';
 import SimpleAccordion from '../Accordian';
 import { useAuth0 } from '@auth0/auth0-react';
+import NotesForm from '../NotesForm/index.js';
 
 //Bug: tags in new entries are not showing
 //please
 // import NotesForm from '../NotesForm/index.js';
 /*Props: user{email} -> Email used to locate the users notes in the server */
-function Diary(props) {
+function Diary() {
   const [notes, setNotes] = useState([]);
-  const user = useAuth0();
-  console.log(user);
+  const { user, isAuthenticated, isLoading } = useAuth0();
   /*
   SideEffect that runs on load to display all of the notes of the current logged in user 
   This component is protected from being loaded if there is no current user
   */
   useEffect(() => {
     async function Fetch() {
-      let res = await fetch(
-        `http://localhost:3001/notes?email=${props.user.email}`
-      );
+      let res = await fetch(`http://localhost:3001/notes?email=${user.email}`);
       let json = await res.json();
       let dataArr = json.data;
       setNotes(dataArr);
     }
     Fetch();
-  }, [props.user.email]);
+  }, [user.email]);
 
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
+  if (!isAuthenticated) {
+    return <div>Not authenticated...</div>;
+  }
   return (
     <>
       <Header></Header>
       <SimpleAccordion arr={notes}></SimpleAccordion>
-      {/* <NotesForm></NotesForm> */}
+      <NotesForm></NotesForm>
     </>
   );
 }
