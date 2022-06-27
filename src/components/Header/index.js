@@ -1,5 +1,5 @@
-// import { Link } from 'react-router-dom';
-// import Button from '@mui/material/Button';
+import { Link } from 'react-router-dom';
+import Button from '@mui/material/Button';
 import { useAuth0 } from '@auth0/auth0-react';
 import Menu from '../Menu';
 /*
@@ -41,7 +41,7 @@ function Header() {
           New Entry
         </Button>
       )} */}
-        {/* <Link className="homeLink" to="/">
+        <Link className="homeLink" to="/">
           <Button variant="contained">Home</Button>
         </Link>
         <Link className="resourcesLink" to="/resources">
@@ -52,7 +52,7 @@ function Header() {
         </Link>
         <Link to="/settings">
           <Button variant="contained">Settings</Button>
-        </Link> */}
+        </Link>
         <Menu></Menu>
       </nav>
     </header>

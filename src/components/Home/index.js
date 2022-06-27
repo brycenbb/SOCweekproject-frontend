@@ -43,7 +43,6 @@ function Home() {
 
   //Boolean to keep track of log in status of current user
   let islogged = false;
-  console.log('hi', islogged, isAuthenticated);
   if (user !== undefined) {
     islogged = true;
   }
