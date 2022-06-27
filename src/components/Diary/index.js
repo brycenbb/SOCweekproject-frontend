@@ -7,7 +7,7 @@ import NotesForm from '../NotesForm/index.js';
 
 // import NotesForm from '../NotesForm/index.js';
 /*Props: user{email} -> Email used to locate the users notes in the server */
-function Diary(props) {
+function Diary() {
   const [notes, setNotes] = useState([]);
   const { user, isAuthenticated, isLoading } = useAuth0();
   /*

@@ -117,7 +117,7 @@
 
 /* -------------------------------------resources------------------------------- */
 #usernameInput::placeholder {
-  color: var(--soclightblue);
+  color: var(--socblue);
 }
 #usernameInput > * {
   color: var(--soclightblue);

@@ -15,7 +15,7 @@ export default function NotesForm(props) {
   //Form submission function that reads each input type and adds it to the object to be sent to the server if needed.
   //state keeping track of topic dropdown values
   const [topicValue, setTopicValue] = useState('');
-  const { user, isAuthenticated, isLoading } = useAuth0();
+  const { user } = useAuth0();
 
   //function changing topicValue when dropdown value changes
   function handleDropdownChange(e) {

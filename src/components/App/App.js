@@ -36,9 +36,7 @@ function App() {
         ></Route>
         <Route
           path="/diary"
-          element={
-            <ProtectedRoute user={user} component={Diary}></ProtectedRoute>
-          }
+          element={<ProtectedRoute component={Diary}></ProtectedRoute>}
         ></Route>
         <Route path="/resources" element={<Resources header={true} />}></Route>
         <Route path="/panic1" element={<PanicButton />}></Route>
