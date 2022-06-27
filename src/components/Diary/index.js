@@ -8,23 +8,21 @@ import { useAuth0 } from '@auth0/auth0-react';
 /*Props: user{email} -> Email used to locate the users notes in the server */
 function Diary(props) {
   const [notes, setNotes] = useState([]);
-  const user = useAuth0();
-  console.log(user);
+  const { user, isAuthenticated, isLoading } = useAuth0();
+  console.log(user, isAuthenticated, isLoading);
   /*
   SideEffect that runs on load to display all of the notes of the current logged in user 
   This component is protected from being loaded if there is no current user
   */
   useEffect(() => {
     async function Fetch() {
-      let res = await fetch(
-        `http://localhost:3001/notes?email=${props.user.email}`
-      );
+      let res = await fetch(`http://localhost:3001/notes?email=${user.email}`);
       let json = await res.json();
       let dataArr = json.data;
       setNotes(dataArr);
     }
     Fetch();
-  }, [props.user.email]);
+  }, [user.email]);
 
   return (
     <>

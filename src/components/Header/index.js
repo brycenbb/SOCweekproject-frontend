@@ -1,10 +1,13 @@
 import { Link } from 'react-router-dom';
 import Button from '@mui/material/Button';
+import { useAuth0 } from '@auth0/auth0-react';
 
 /*
 Props: Logged -> Keeps track of if a user is logged in to determine if New Entry should be disabled.
 */
 function Header({ logged }) {
+  const { user, isAuthenticated, isLoading } = useAuth0();
+
   return (
     <header>
       <nav className="navbar">
