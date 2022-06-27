@@ -8,13 +8,6 @@ import Avatar from '@mui/material/Avatar';
  */
 const Profile = (props) => {
   const { user, isAuthenticated, isLoading } = useAuth0();
-
-  useEffect(() => {
-    if (isAuthenticated) {
-      props.addUser(user);
-    }
-  });
-
   if (isLoading) {
     return <div>Loading ...</div>;
   }

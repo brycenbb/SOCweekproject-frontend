@@ -1,6 +1,7 @@
 // import MailIcon from '@material-ui/icons/Mail';
 // import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
 // import MapIcon from '@material-ui/icons/Map';
+import { Link } from 'react-router-dom';
 
 // Import the circular menu
 import {
@@ -9,7 +10,7 @@ import {
   TooltipPlacement,
 } from 'react-circular-menu';
 
-function Menu(props) {
+function Menu() {
   return (
     <CircleMenu
       className="circleMenu"
@@ -27,19 +28,37 @@ function Menu(props) {
     >
       <CircleMenuItem
         sx={{ width: 'fit-content' }}
-        onClick={() => alert('Clicked the item')}
+        onClick={() => (window.location.href = '/settings')}
         tooltip="Email"
         tooltipPlacement={TooltipPlacement.Right}
       >
-        Diary
-      </CircleMenuItem>
-      <CircleMenuItem sx={{ width: 'fit-content' }} tooltip="Help">
-        Resources
-      </CircleMenuItem>
-      <CircleMenuItem sx={{ width: 'fit-content' }} tooltip="Location">
         Settings
       </CircleMenuItem>
-      <CircleMenuItem sx={{ width: 'fit-content' }} tooltip="Info">
+      <CircleMenuItem
+        sx={{ width: 'fit-content' }}
+        onClick={() => {
+          window.location.href = '/resources';
+        }}
+        tooltip="Help"
+      >
+        Resources
+      </CircleMenuItem>
+      <CircleMenuItem
+        sx={{ width: 'fit-content' }}
+        onClick={() => {
+          window.location.href = '/diary';
+        }}
+        tooltip="Location"
+      >
+        Diary
+      </CircleMenuItem>
+      <CircleMenuItem
+        sx={{ width: 'fit-content' }}
+        onClick={() => {
+          window.location.href = '/';
+        }}
+        tooltip="Info"
+      >
         Home
       </CircleMenuItem>
     </CircleMenu>
