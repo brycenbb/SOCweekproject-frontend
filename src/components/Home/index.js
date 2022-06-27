@@ -46,24 +46,28 @@ function Home(props) {
   if (user !== undefined) {
     islogged = true;
   }
-
+  if (isLoading) {
+    return <div>Loading ...</div>;
+  }
   return (
-    <div className="App">
-      <Header />
-      <Menu />
-      {!user && <LoginButton />}
-      {islogged && <p className="centerMe">Hero's Journey Progress</p>}
-      {islogged && <ProgressBar />}
+    isAuthenticated && (
+      <div className="App">
+        <Header />
+        <Menu />
+        {!user && <LoginButton />}
+        {islogged && <p className="centerMe">Hero's Journey Progress</p>}
+        {islogged && <ProgressBar />}
 
-      <Profile slackusername={slack} addUser={props.setUser}></Profile>
-      {newUser && <Prompt email={props.user.email} />}
-      {islogged && <LogoutButton />}
-      <Link className="panicBox" to="/panic1">
-        <Button src={PanicPicture}> </Button>
-      </Link>
-      <NotesForm />
-      <Resources />
-    </div>
+        <Profile slackusername={slack}></Profile>
+        {newUser && <Prompt email={user.email} />}
+        {islogged && <LogoutButton />}
+        <Link className="panicBox" to="/panic1">
+          <Button src={PanicPicture}> </Button>
+        </Link>
+        <NotesForm />
+        <Resources />
+      </div>
+    )
   );
 }
 export default Home;
