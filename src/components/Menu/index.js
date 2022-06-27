@@ -16,8 +16,8 @@ function Menu() {
       className="circleMenu"
       startAngle={0}
       rotationAngle={240}
-      itemSize={4}
-      radius={9}
+      itemSize={3}
+      radius={6}
       /**
        * rotationAngleInclusive (default true)
        * Whether to include the ending angle in rotation because an
@@ -28,17 +28,17 @@ function Menu() {
     >
       <CircleMenuItem
         className="linkparent"
-        sx={{ width: 'fit-content' }}
         // onClick={() => (window.location.href = '/settings')}
         tooltip="Settings"
         tooltipPlacement={TooltipPlacement.Right}
       >
-        <Link className="linkgrow" to="/resources">
+        <Link className="linkgrow" to="/settings">
           Settings
         </Link>
       </CircleMenuItem>
       <CircleMenuItem
         className="linkparent"
+        tooltipPlacement={TooltipPlacement.Bottom}
         sx={{ width: 'fit-content' }}
         // onClick={() => {
         //   window.location.href = '/resources';
@@ -51,13 +51,14 @@ function Menu() {
       </CircleMenuItem>
       <CircleMenuItem
         className="linkparent"
+        tooltipPlacement={TooltipPlacement.Bottom}
         sx={{ width: 'fit-content' }}
         // onClick={() => {
         //   window.location.href = '/diary';
         // }}
         tooltip="Diary"
       >
-        <Link className="linkgrow" to="/resources">
+        <Link className="linkgrow" to="/diary">
           Diary
         </Link>
       </CircleMenuItem>
@@ -70,7 +71,7 @@ function Menu() {
         // }}
         tooltip="Home"
       >
-        <Link className="linkgrow" to="/resources">
+        <Link className="linkgrow" to="/">
           Home
         </Link>
       </CircleMenuItem>

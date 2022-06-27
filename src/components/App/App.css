@@ -21,6 +21,7 @@
 }
 #allNotesContainer {
   width: 80%;
+  height: 100%;
   justify-self: center;
   margin: 0 auto;
   padding: 1rem 0;
@@ -501,6 +502,7 @@ a:hover {
 }
 .circleMenu {
   margin: 0 auto;
+  transform: scale(1.2);
 }
 #tags-field {
   width: 100%;
