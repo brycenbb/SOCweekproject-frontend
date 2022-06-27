@@ -43,6 +43,7 @@ function Home() {
 
   //Boolean to keep track of log in status of current user
   let islogged = false;
+  console.log('hi', islogged, isAuthenticated);
   if (user !== undefined) {
     islogged = true;
   }
@@ -50,24 +51,22 @@ function Home() {
     return <div>Loading ...</div>;
   }
   return (
-    isAuthenticated && (
-      <div className="App">
-        <Header />
-        <Menu />
-        {!user && <LoginButton />}
-        {islogged && <p className="centerMe">Hero's Journey Progress</p>}
-        {islogged && <ProgressBar />}
+    <div className="App">
+      <Header />
+      <Menu />
+      {!user && <LoginButton />}
+      {islogged && <p className="centerMe">Hero's Journey Progress</p>}
+      {islogged && <ProgressBar />}
 
-        <Profile slackusername={slack}></Profile>
-        {newUser && <Prompt email={user.email} />}
-        {islogged && <LogoutButton />}
-        <Link className="panicBox" to="/panic1">
-          <Button src={PanicPicture}> </Button>
-        </Link>
-        <NotesForm />
-        <Resources />
-      </div>
-    )
+      <Profile slackusername={slack}></Profile>
+      {newUser && <Prompt email={user.email} />}
+      {islogged && <LogoutButton />}
+      <Link className="panicBox" to="/panic1">
+        <Button src={PanicPicture}> </Button>
+      </Link>
+      <NotesForm />
+      <Resources />
+    </div>
   );
 }
 export default Home;
