@@ -1,32 +1,32 @@
-import Tag from "../../Assets/Tag.png";
-import video from "../../Assets/video.png";
-import image from "../../Assets/image.png";
-import notes from "../../Assets/notes.png";
-import star from "../../Assets/star.svg";
+import Tag from '../../Assets/Tag.png';
+import video from '../../Assets/video.png';
+import image from '../../Assets/image.png';
+import notes from '../../Assets/notes.png';
+import star from '../../Assets/star.svg';
 let images;
 
 function ResourceCard(props) {
-
   if (props.tags.includes('video')) {
     images = video;
-  } else if (props.tags.includes("image")) {
+  } else if (props.tags.includes('image')) {
     images = image;
-  } else if (props.tags.includes("article")) {
+  } else if (props.tags.includes('article')) {
     images = notes;
   }
 
   return (
     <section className="resourceCard">
       <div className="topCard">
-        {" "}
+        {' '}
         <img
           className="resourceImage"
           src={images}
           alt="resource type logo"
-        ></img>{" "}
+        ></img>{' '}
         <a target="_blank" rel="noreferrer" className="title" href={props.link}>
-          {props.link.slice(0, 30) + "..."}
+          {props.link.slice(0, 30) + '...'}
         </a>
+        <iframe title={props.link} src={props.link}></iframe>
         <div
           id="rating"
           aria-label={`Rating for this resource is ${props.rating} stars out of 5`}

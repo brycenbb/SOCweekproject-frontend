@@ -12,15 +12,22 @@ function LinearProgressWithLabel(props) {
     <Box sx={{ display: 'flex', alignItems: 'center' }}>
       <Box sx={{ width: '100%', mr: 1 }}>
         <LinearProgress
-          sx={{ height: 'auto', minHeight: 20, maxHeight: 50 }}
+          sx={{
+            height: 'auto',
+            minHeight: 20,
+            maxHeight: 50,
+            borderRadius: '2rem',
+          }}
           variant="determinate"
           {...props}
         />
       </Box>
-      <Box sx={{ minWidth: 35 }}>
-        <Typography variant="body2" color="text.secondary">{`${Math.round(
-          props.value
-        )}%`}</Typography>
+      <Box sx={{ minWidth: 35, fontSize: '4rem' }}>
+        <Typography
+          variant="body2"
+          sx={{ fontSize: '2rem' }}
+          color="text.secondary"
+        >{`${Math.round(props.value)}%`}</Typography>
       </Box>
     </Box>
   );

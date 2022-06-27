@@ -53,7 +53,7 @@ function Home() {
     <div className="App">
       <Header />
       {!user && <LoginButton />}
-      {islogged && <p className="centerMe">Hero's Journey Progress</p>}
+      {islogged && <p className="centerMe">Your Hero's Journey Progress</p>}
       {islogged && <ProgressBar />}
 
       <Profile slackusername={slack}></Profile>

@@ -6,6 +6,7 @@
 }
 * {
   box-sizing: border-box;
+  overscroll-behavior: none;
 }
 /* -----------------------------------App--------------------------------------- */
 
@@ -37,6 +38,14 @@
 #loginBtn {
   min-width: 4rem;
   margin: 0 auto;
+  position: absolute;
+  top: 3rem;
+  right: 3rem;
+}
+
+#loginBtn:hover,
+#logoutBtn:hover {
+  background-color: var(--socgreen);
 }
 
 .entryBox {
@@ -65,7 +74,8 @@
 #profile-container {
   border: solid;
   border-radius: 0.5rem;
-  border-color: var(--socblue);
+  /* border-color: var(--socblue); */
+  background-color: var(--socblue);
   width: fit-content;
   align-self: center;
   justify-self: center;
@@ -123,6 +133,9 @@
 }
 
 /* -------------------------------------resources------------------------------- */
+label {
+  color: var(--soclightblue);
+}
 #usernameInput::placeholder {
   color: var(--socblue);
 }
@@ -165,6 +178,10 @@
   align-items: center;
   margin: auto 0;
 } */
+#topic-label {
+  padding-top: 0.3rem;
+  color: var(--soclightblue);
+}
 .linkgrow {
   display: flex;
   justify-content: center;
@@ -314,6 +331,8 @@ textarea {
   justify-self: center;
   text-decoration: none;
   font-weight: 600;
+  font-size: 3rem;
+  margin: 1rem 0;
 }
 .blackText {
   color: black;

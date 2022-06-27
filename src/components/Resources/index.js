@@ -89,7 +89,9 @@ function Resources({ header }) {
             }}
           >
             <FormControl sx={{ m: 1, minWidth: 120 }} size="medium">
-              <InputLabel id="topic-label">Topic</InputLabel>
+              <InputLabel sx={{ alignItems: 'center' }} id="topic-label">
+                Topic
+              </InputLabel>
               <Select
                 variant="standard"
                 sx={{ backgroundColor: 'white' }}
