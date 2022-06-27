@@ -1,7 +1,7 @@
 // import MailIcon from '@material-ui/icons/Mail';
 // import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
 // import MapIcon from '@material-ui/icons/Map';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 // Import the circular menu
 import {

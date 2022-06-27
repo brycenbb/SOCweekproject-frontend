@@ -2,7 +2,7 @@ import Header from '../Header';
 import LoginButton from '../Login/index.js';
 import LogoutButton from '../Logout/index.js';
 import Profile from '../Profile/index.js';
-import Menu from '../Menu';
+// import Menu from '../Menu';
 import { Link } from 'react-router-dom';
 import Resources from '../Resources';
 import PanicPicture from '../../Assets/PanicButton.png';
