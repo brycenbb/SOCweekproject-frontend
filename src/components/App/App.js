@@ -20,14 +20,10 @@ import { useState } from 'react';
 
 */
 function App() {
-  const [user, setUser] = useState({});
   return (
     <Router>
       <Routes>
-        <Route
-          path="/"
-          element={<Home user={user} setUser={setUser} />}
-        ></Route>
+        <Route path="/" element={<Home />}></Route>
         <Route
           path="/settings"
           element={<ProtectedRoute component={Settings}></ProtectedRoute>}

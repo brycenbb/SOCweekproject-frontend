@@ -14,7 +14,7 @@ import Prompt from '../Prompt';
 import { useAuth0 } from '@auth0/auth0-react';
 
 /*Props: user-> state from App, setUser-> setState from App */
-function Home(props) {
+function Home() {
   const [newUser, setNewUser] = useState(false);
   const [slack, setSlackName] = useState('');
   const { user, isAuthenticated, isLoading } = useAuth0();
