@@ -5,8 +5,8 @@ import { useAuth0 } from '@auth0/auth0-react';
 /*
 Props: Logged -> Keeps track of if a user is logged in to determine if New Entry should be disabled.
 */
-function Header({ logged }) {
-  const { user, isAuthenticated, isLoading } = useAuth0();
+function Header() {
+  const { isAuthenticated, isLoading } = useAuth0();
 
   if (isLoading) {
     return <div>Loading...</div>;

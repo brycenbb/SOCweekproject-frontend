@@ -9,11 +9,13 @@ import MenuItem from '@mui/material/MenuItem';
 import InputLabel from '@mui/material/InputLabel';
 import { useState } from 'react';
 import Button from '@mui/material/Button';
+import { useAuth0 } from '@auth0/auth0-react';
 
 export default function NotesForm(props) {
   //Form submission function that reads each input type and adds it to the object to be sent to the server if needed.
   //state keeping track of topic dropdown values
   const [topicValue, setTopicValue] = useState('');
+  const { user, isAuthenticated, isLoading } = useAuth0();
 
   //function changing topicValue when dropdown value changes
   function handleDropdownChange(e) {
@@ -91,9 +93,8 @@ export default function NotesForm(props) {
         document.getElementById('js-tag').name,
       ];
     }
-
     //All elements have been searched, ready to post the data to the server and database.
-    await fetch(`http://localhost:3001/notes?email=${props.email}`, {
+    await fetch(`http://localhost:3001/notes?email=${user.email}`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -112,7 +113,7 @@ export default function NotesForm(props) {
     }
     if (document.getElementById('happy-to-help-input').checked) {
       console.log('woohoo');
-      await fetch(`http://localhost:3001/help?email=${props.email}`, {
+      await fetch(`http://localhost:3001/help?email=${user.email}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
