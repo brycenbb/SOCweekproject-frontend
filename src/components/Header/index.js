@@ -41,7 +41,7 @@ function Header() {
           New Entry
         </Button>
       )} */}
-        <Link className="homeLink" to="/">
+        {/* <Link className="homeLink" to="/">
           <Button variant="contained">Home</Button>
         </Link>
         <Link className="resourcesLink" to="/resources">
@@ -52,7 +52,7 @@ function Header() {
         </Link>
         <Link to="/settings">
           <Button variant="contained">Settings</Button>
-        </Link>
+        </Link> */}
         <Menu></Menu>
       </nav>
     </header>
