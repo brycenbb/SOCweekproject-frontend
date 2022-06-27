@@ -486,7 +486,9 @@ a:hover {
   display: flex;
   justify-content: center;
 }
-
+.circleMenu {
+  margin: 0 auto;
+}
 #tags-field {
   width: 100%;
   display: flex;

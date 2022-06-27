@@ -2,6 +2,7 @@ import Header from '../Header';
 import LoginButton from '../Login/index.js';
 import LogoutButton from '../Logout/index.js';
 import Profile from '../Profile/index.js';
+import Menu from '../Menu';
 import { Link } from 'react-router-dom';
 import Resources from '../Resources';
 import PanicPicture from '../../Assets/PanicButton.png';
@@ -46,6 +47,7 @@ function Home(props) {
   return (
     <div className="App">
       <Header />
+      <Menu></Menu>
       {!islogged && <LoginButton />}
       {islogged && <p className="centerMe">Hero's Journey Progress</p>}
       {islogged && <ProgressBar email={props.user.email} />}
