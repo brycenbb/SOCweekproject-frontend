@@ -35,13 +35,16 @@ function Menu() {
         Settings
       </CircleMenuItem>
       <CircleMenuItem
+        className="linkparent"
         sx={{ width: 'fit-content' }}
         // onClick={() => {
         //   window.location.href = '/resources';
         // }}
         tooltip="Resources"
       >
-        <Link to="/resources">Resources</Link>
+        <Link className="linkgrow" to="/resources">
+          Resources
+        </Link>
       </CircleMenuItem>
       <CircleMenuItem
         sx={{ width: 'fit-content' }}
