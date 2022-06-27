@@ -8,10 +8,13 @@ Props: Logged -> Keeps track of if a user is logged in to determine if New Entry
 function Header({ logged }) {
   const { user, isAuthenticated, isLoading } = useAuth0();
 
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
   return (
     <header>
       <nav className="navbar">
-        {logged && (
+        {isAuthenticated && (
           <Button
             variant="contained"
             onClick={() => {
@@ -23,7 +26,7 @@ function Header({ logged }) {
             New Entry
           </Button>
         )}
-        {!logged && (
+        {!isAuthenticated && (
           <Button
             disabled
             sx={{

@@ -3,6 +3,7 @@ import Header from '../Header';
 import Tag from '../../Assets/Tag.png';
 import SimpleAccordion from '../Accordian';
 import { useAuth0 } from '@auth0/auth0-react';
+import NotesForm from '../NotesForm/index.js';
 
 // import NotesForm from '../NotesForm/index.js';
 /*Props: user{email} -> Email used to locate the users notes in the server */
@@ -28,7 +29,7 @@ function Diary(props) {
     <>
       <Header></Header>
       <SimpleAccordion arr={notes}></SimpleAccordion>
-      {/* <NotesForm></NotesForm> */}
+      <NotesForm></NotesForm>
     </>
   );
 }
