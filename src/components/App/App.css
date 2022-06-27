@@ -66,11 +66,16 @@
   border: solid;
   border-radius: 0.5rem;
   border-color: var(--socblue);
-  max-width: 20vw;
+  width: fit-content;
   align-self: center;
   justify-self: center;
 }
 
+#profile-name {
+  overflow-wrap: normal;
+  max-width: 30vw;
+  width: fit-content;
+}
 /* ---------------------------------PanicButton--------------------------------- */
 .Panic {
   position: sticky;
