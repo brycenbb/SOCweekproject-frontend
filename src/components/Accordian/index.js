@@ -5,7 +5,10 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Tag from '../../Assets/Tag.png';
-
+import { CAccordion } from '@coreui/react';
+import { CAccordionHeader } from '@coreui/react';
+import { CAccordionItem } from '@coreui/react';
+import { CAccordionBody } from '@coreui/react';
 //Idea: accordian of accordians by week! DONE
 //Idea: In NotesForm, change the route in the backend so that if someone
 //Goes and submits a note for a week+day that they already have one, it
@@ -18,58 +21,21 @@ export default function SimpleAccordion(props) {
 
   return (
     <main id="allNotesContainer">
-      {filteredArr.map(function (itemArr, index) {
-        if (itemArr.length === 0) {
-          return;
-        }
-        return (
-          <Accordion key={index}>
-            <AccordionSummary
-              sx={{ border: '1px solid #181e50' }}
-              expandIcon={<ExpandMoreIcon />}
-              aria-controls={`panel${index}a-content`}
-              id={`panel${index}a-header`}
-            >
-              <Typography>Week: {index + 1}</Typography>
-            </AccordionSummary>
-            <AccordionDetails className="accordNoteWeek">
-              <Typography>
-                {itemArr.map((item, index) => {
-                  return (
-                    <Accordion key={index}>
-                      <AccordionSummary
-                        sx={{ border: '1px solid #181e50' }}
-                        expandIcon={<ExpandMoreIcon />}
-                        aria-controls={`panel${index}a-content`}
-                        id={`panel${index}a-header`}
-                      >
-                        <Typography>Day: {item.day}</Typography>
-                      </AccordionSummary>
-                      <AccordionDetails className="accordNote">
-                        <Typography>{item.note}</Typography>
-                        <ol className="tagList">
-                          {item.tags.map((item, index) => {
-                            return (
-                              <li key={index}>
-                                <img
-                                  alt="tag"
-                                  className="imageTag"
-                                  src={Tag}
-                                ></img>
-                                {item}
-                              </li>
-                            );
-                          })}
-                        </ol>
-                      </AccordionDetails>
-                    </Accordion>
-                  );
-                })}
-              </Typography>
-            </AccordionDetails>
-          </Accordion>
-        );
-      })}
+      <CAccordion activeItemKey={2}>
+        {filteredArr.map(function (itemArr, index) {
+          if (itemArr.length === 0) {
+            return;
+          }
+          return (
+            <CAccordionItem activeItemKey={index}>
+              <CAccordionHeader className="accordHeader">
+                Week: {index + 1}
+              </CAccordionHeader>
+              <CAccordionBody className="accordNoteWeek">Hello</CAccordionBody>
+            </CAccordionItem>
+          );
+        })}
+      </CAccordion>
     </main>
   );
 }

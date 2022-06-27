@@ -19,6 +19,9 @@
   justify-content: center;
   gap: 1rem;
 }
+.accordHeader {
+  border: 1px solid #181e50;
+}
 #allNotesContainer {
   width: 80%;
   height: 100%;
