@@ -93,6 +93,7 @@ export default function NotesForm(props) {
         document.getElementById('js-tag').name,
       ];
     }
+
     //All elements have been searched, ready to post the data to the server and database.
     await fetch(`http://localhost:3001/notes?email=${user.email}`, {
       method: 'POST',
@@ -112,7 +113,6 @@ export default function NotesForm(props) {
       });
     }
     if (document.getElementById('happy-to-help-input').checked) {
-      console.log('woohoo');
       await fetch(`http://localhost:3001/help?email=${user.email}`, {
         method: 'POST',
         headers: {
