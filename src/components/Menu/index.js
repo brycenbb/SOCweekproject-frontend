@@ -13,11 +13,12 @@ import {
 function Menu() {
   return (
     <CircleMenu
+      style={{ borderColor: '#181e50' }}
       className="circleMenu"
-      startAngle={-15}
+      startAngle={-10}
       rotationAngle={150}
-      itemSize={3}
-      radius={7}
+      itemSize={3.2}
+      radius={7.2}
       /**
        * rotationAngleInclusive (default true)
        * Whether to include the ending angle in rotation because an
@@ -27,6 +28,7 @@ function Menu() {
       rotationAngleInclusive={false}
     >
       <CircleMenuItem
+        style={{ borderColor: '#181e50' }}
         className="linkparent"
         // onClick={() => (window.location.href = '/settings')}
         tooltip="Settings"
@@ -37,6 +39,7 @@ function Menu() {
         </Link>
       </CircleMenuItem>
       <CircleMenuItem
+        style={{ borderColor: '#181e50' }}
         className="linkparent"
         tooltipPlacement={TooltipPlacement.Right}
         sx={{ width: 'fit-content' }}
@@ -50,6 +53,7 @@ function Menu() {
         </Link>
       </CircleMenuItem>
       <CircleMenuItem
+        style={{ borderColor: '#181e50' }}
         className="linkparent"
         tooltipPlacement={TooltipPlacement.Bottom}
         sx={{ width: 'fit-content' }}
@@ -63,6 +67,7 @@ function Menu() {
         </Link>
       </CircleMenuItem>
       <CircleMenuItem
+        style={{ borderColor: '#181e50' }}
         className="linkparent"
         tooltipPlacement={TooltipPlacement.Bottom}
         sx={{ width: 'fit-content' }}
