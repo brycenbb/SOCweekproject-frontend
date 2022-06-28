@@ -23,9 +23,9 @@ export default function SimpleAccordion(props) {
           return <></>;
         }
         return (
-          <Accordion key={index}>
+          <Accordion key={index} sx={{ border: '1px solid #181e50' }}>
             <AccordionSummary
-              sx={{ border: '1px solid #181e50' }}
+              sx={{ borderBottom: '1px solid #181e50' }}
               expandIcon={<ExpandMoreIcon />}
               aria-controls={`panel${index}a-content`}
               id={`panel${index}a-header`}
@@ -36,9 +36,9 @@ export default function SimpleAccordion(props) {
               <Typography>
                 {itemArr.map((item, index) => {
                   return (
-                    <Accordion key={index}>
+                    <Accordion key={index} sx={{ border: '1px solid #181e50' }}>
                       <AccordionSummary
-                        sx={{ border: '1px solid #181e50' }}
+                        sx={{ borderBottom: '1px solid #181e50' }}
                         expandIcon={<ExpandMoreIcon />}
                         aria-controls={`panel${index}a-content`}
                         id={`panel${index}a-header`}

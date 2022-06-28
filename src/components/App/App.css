@@ -26,11 +26,11 @@
   justify-self: center;
   margin: 0 auto;
   padding: 1rem;
-  background-color: var(--soclightblue);
+  /* background-color: var(--soclightblue); */
 }
-.MuiAccordion-region {
+/* .MuiAccordion-region {
   background-color: var(--socgreen);
-}
+} */
 .MuiButtonBase-root {
   background-color: var(--socblue);
 }
@@ -258,11 +258,18 @@ label {
 }
 
 .imageTag {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1rem;
+  height: 1rem;
   margin-right: 0.5rem;
 }
-
+.newEntryButton {
+  margin: 0 auto;
+}
+#entryButtonContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 #welcomeText {
   margin: 0 1rem;
 }
@@ -458,6 +465,7 @@ a:hover {
   display: flex;
   gap: 1rem;
   color: grey;
+  padding: 0;
 }
 
 .diary-note {

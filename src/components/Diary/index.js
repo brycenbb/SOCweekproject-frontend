@@ -4,6 +4,7 @@ import Header from '../Header';
 import SimpleAccordion from '../Accordian';
 import { useAuth0 } from '@auth0/auth0-react';
 import NotesForm from '../NotesForm/index.js';
+import Button from '@mui/material/Button';
 
 //Bug: tags in new entries are not showing
 //please
@@ -35,6 +36,37 @@ function Diary() {
   return (
     <>
       <Header></Header>
+      <div id="entryButtonContainer">
+        {isAuthenticated && (
+          <Button
+            className="newEntryButton"
+            variant="contained"
+            onClick={() => {
+              document
+                .querySelector('.modalcontainer2')
+                .classList.remove('hidden');
+            }}
+          >
+            New Entry
+          </Button>
+        )}
+        {!isAuthenticated && (
+          <Button
+            className="newEntryButton"
+            disabled
+            sx={{
+              backgroundColor: '#dcdde1',
+            }}
+            onClick={() => {
+              document
+                .querySelector('.modalcontainer2')
+                .classList.remove('hidden');
+            }}
+          >
+            New Entry
+          </Button>
+        )}
+      </div>
       <SimpleAccordion arr={notes}></SimpleAccordion>
       <NotesForm></NotesForm>
     </>
