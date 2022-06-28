@@ -20,7 +20,7 @@ export default function SimpleAccordion(props) {
     <main id="allNotesContainer">
       {filteredArr.map(function (itemArr, index) {
         if (itemArr.length === 0) {
-          return <></>;
+          return <div key={index}> </div>;
         }
         return (
           <Accordion key={index} sx={{ border: '1px solid #181e50' }}>
