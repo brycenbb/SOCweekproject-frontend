@@ -28,7 +28,7 @@ Diary form:
 
 ## Installation and Setup Instructions
 
-To get the full experience of the app on your computer, first go to [w9_backend-project-chris-angels](https://github.com/brycenbb/SOCweekproject-backend) and follow installation instructions there to set up your server and database. Log in functionality can be completed by setting up a SPA with auth0 by following the first two steps [here](https://auth0.com/docs/quickstart/spa/react/01-login#install-the-auth0-react-sdk=)
+To get the full experience of the app on your computer, first go to my backend code at [SOCweekproject-backend](https://github.com/brycenbb/SOCweekproject-backend) and follow installation instructions there to set up your server and database. Log in functionality can be completed by setting up a SPA with auth0 by following the first two steps [here](https://auth0.com/docs/quickstart/spa/react/01-login#install-the-auth0-react-sdk=)
 
 Clone down this repository. You will need node and npm installed on your machine.
 
