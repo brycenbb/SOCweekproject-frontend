@@ -1,0 +1,15 @@
+#profile-container {
+    border: solid;
+    border-radius: 0.5rem;
+    /* border-color: var(--socblue); */
+    background-color: var(--socblue);
+    width: fit-content;
+    align-self: center;
+    justify-self: center;
+}
+
+#profile-name {
+    overflow-wrap: normal;
+    max-width: 30vw;
+    width: fit-content;
+}

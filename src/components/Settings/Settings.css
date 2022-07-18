@@ -1,0 +1,36 @@
+#settings-form {
+  font-size: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  padding: 10%;
+  border-radius: 50px;
+  background: var(--socgreen);
+  box-shadow: 20px 20px 60px #141a44, -20px -20px 60px #1c235c;
+  color: var(--socwhite);
+}
+#settings-form > * {
+  font-size: 1.3rem;
+}
+
+#settings-form > div > * {
+  font-size: 1.3rem;
+}
+
+#settings-main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  place-items: center;
+  background-color: var(--soclightblue);
+}
+
+#username-input::placeholder {
+  color: var(--socblue);
+}
+
+#username-input > * {
+  color: var(--soclightblue);
+}

@@ -1,0 +1,39 @@
+#day-week-diary-h3 {
+  margin-top: 0;
+}
+
+.notescontainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5vh;
+  background-color: var(--soclightblue);
+}
+
+.tagList {
+  list-style-type: none;
+  display: flex;
+  gap: 1rem;
+  color: grey;
+  padding: 0;
+}
+
+.diary-note {
+  padding: 0.5rem;
+  border: solid var(--socblue);
+  margin-bottom: 0;
+  border-radius: 1rem;
+}
+
+.new-entry-button {
+  margin: 0 auto;
+}
+
+#entry-button-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}

@@ -1,0 +1,168 @@
+label {
+  color: var(--soclightblue);
+}
+
+.MuiOutlinedInput-root > * {
+  color: var(--soclightblue);
+}
+
+.resources-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 0;
+  margin-left: 2.5vw;
+  margin-right: 2.5vw;
+  background: white;
+  border: solid var(--socblue);
+  padding-bottom: 5vh;
+  border-radius: 0.5%;
+  box-shadow: 15px 15px 40px #141a44, -15px -15px 40px #1c235c;
+}
+
+#resources-heading {
+  font-size: 4rem;
+  /*margin-bottom: 0.5rem;*/
+}
+
+#dropdown-menu-cont {
+  margin-bottom: 1.3rem;
+}
+
+#topic-filter-btn {
+  margin-top: 0.8rem;
+}
+
+#topic-label {
+  padding-top: 0.3rem;
+  color: var(--soclightblue);
+}
+
+.rectangle-header {
+  display: flex;
+  align-items: center;
+  align-self: center;
+  color: white;
+  width: 100%;
+  height: 15vh;
+  background: var(--socblue);
+}
+
+.resource-card {
+  display: flex;
+  height: fit-content;
+  flex-direction: column;
+  border: solid #181e50;
+  grid-template-columns: 1fr 1fr;
+  background-color: #4a90e2;
+  margin-top: 2.5vh;
+  margin-left: 3vw;
+  margin-right: 3vw;
+}
+
+.top-card {
+  display: flex;
+  justify-content: space-between;
+  justify-self: center;
+  align-items: center;
+}
+
+#rating {
+  justify-self: center;
+  text-align: center;
+  display: flex;
+  width: fit-content;
+  margin-right: 3rem;
+}
+
+#rating-star {
+  height: auto;
+  width: 2rem;
+}
+
+#rating-text {
+  display: block;
+  margin-right: 1rem;
+}
+
+.resource-image {
+  height: 5%;
+  width: 5%;
+  margin: 1rem 1rem;
+  /* border: solid 10px #181e50; */
+}
+
+.title {
+  align-self: center;
+  margin-left: 5rem;
+}
+
+.tags {
+  display: flex;
+  gap: 3rem;
+  margin-left: 1rem;
+  text-decoration: none;
+  list-style-type: none;
+  align-self: flex-start;
+  justify-self: flex-start;
+  padding-right: 50vw;
+}
+
+.image-tag {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.5rem;
+}
+
+textarea {
+  max-width: 20rem;
+  max-height: 20rem;
+}
+
+#root {
+  height: 100vh;
+}
+
+#root > * {
+  color: white;
+  font-size: 2rem;
+}
+
+.hero-journey-header {
+  justify-self: center;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 3rem;
+  margin: 1rem 0;
+}
+
+.blackText {
+  color: black;
+}
+
+#profile-name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  filter: brightness(0.7);
+}
+
+#dropdown-menu-cont {
+  transform: scale(2);
+  margin-left: 5rem;
+}
+
+.all-cards {
+  max-height: 60rem;
+  overflow-y: scroll;
+}

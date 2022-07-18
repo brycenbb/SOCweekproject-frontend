@@ -1,0 +1,16 @@
+.nav-bar {
+  display: flex;
+  height: 15vh;
+  width: auto;
+  /* background-color: var(--socblue); */
+  align-items: center;
+  /* justify-content: flex-end; */
+}
+
+.homeLink {
+  color: #31986a;
+}
+
+.resourcesLink {
+  color: #31986a;
+}

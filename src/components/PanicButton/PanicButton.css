@@ -1,0 +1,88 @@
+.Panic {
+  position: sticky;
+  bottom: 25vh;
+  /* margin-left: 70%; */
+  width: fit-content;
+  height: fit-content;
+  right: 100%;
+}
+
+.panic-box {
+  position: fixed;
+  z-index: 10;
+  right: 0%;
+  bottom: 0;
+  display: block;
+  max-width: max-content;
+  height: fit-content;
+}
+
+/* -------------------------------------Panicrooms------------------------------- */
+.main-panic2 {
+  background-color: var(--soclightblue);
+  display: flex;
+  justify-content: space-around;
+  border: solid 20px var(--socblue);
+}
+
+.main-panic3 {
+  background-color: var(--soclightblue);
+  display: flex;
+  justify-content: space-around;
+  border: solid 20px var(--socblue);
+  height: 100vh;
+}
+
+.problem-request {
+  padding-left: 30vw;
+  padding-top: 25vh;
+}
+
+.problem-helpers {
+  padding-left: 25vw;
+  padding-top: 25vh;
+}
+
+.panic-main1 {
+  display: flex;
+  background-repeat: no-repeat;
+  height: 100%;
+  background-size: cover;
+}
+
+.panic1-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.panic1-right {
+  flex: 1.9;
+}
+
+.timer {
+  display: flex;
+  background-color: var(--soclightblue);
+}
+
+/*THE CLASS IS A MAIN CONTAINER IN FILE: PanicButton/index.js, need to figure out why Let's Move button is absolute?*/
+.basic-main {
+  background-color: var(--soclightblue);
+  height: 50.4vw;
+}
+
+#move-button {
+  position: absolute;
+  bottom: 10%;
+  left: 60%;
+  transform: scale(2);
+}
+
+#timer-section {
+  margin-left: 2rem;
+  color: var(--socgreen);
+  background-color: black;
+  font-size: 8rem;
+}

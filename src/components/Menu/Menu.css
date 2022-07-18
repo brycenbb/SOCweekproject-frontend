@@ -1,0 +1,22 @@
+.circle-menu {
+  /* margin: 0 auto; */
+  margin-left: 3.5rem;
+  margin-top: 3.5rem;
+  transform: scale(1.2);
+}
+
+.link-grow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* .linkparent {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto 0;
+} */
