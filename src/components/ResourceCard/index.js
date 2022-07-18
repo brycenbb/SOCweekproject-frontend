@@ -1,32 +1,31 @@
-import Tag from '../../Assets/Tag.png';
-import video from '../../Assets/video.png';
-import image from '../../Assets/image.png';
-import notes from '../../Assets/notes.png';
-import star from '../../Assets/star.svg';
-let images;
+import Tag from "../../Assets/Tag.png";
+import video from "../../Assets/video.png";
+import image from "../../Assets/image.png";
+import notes from "../../Assets/notes.png";
+import star from "../../Assets/star.svg";
+let resourceImage;
 
 function ResourceCard(props) {
-  if (props.tags.includes('video')) {
-    images = video;
-  } else if (props.tags.includes('image')) {
-    images = image;
-  } else if (props.tags.includes('article')) {
-    images = notes;
+  if (props.tags.includes("video")) {
+    resourceImage = video;
+  } else if (props.tags.includes("image")) {
+    resourceImage = image;
+  } else if (props.tags.includes("article")) {
+    resourceImage = notes;
   }
 
   return (
-    <section className="resourceCard">
-      <div className="topCard">
-        {' '}
+    <section className="resource-card">
+      <div className="top-card">
+        {" "}
         <img
-          className="resourceImage"
-          src={images}
+          className="resource-image"
+          src={resourceImage}
           alt="resource type logo"
-        ></img>{' '}
+        ></img>{" "}
         <a target="_blank" rel="noreferrer" className="title" href={props.link}>
-          {props.link.slice(0, 30) + '...'}
+          {props.link.slice(0, 30) + "..."}
         </a>
-        <iframe title={props.link} src={props.link}></iframe>
         <div
           id="rating"
           aria-label={`Rating for this resource is ${props.rating} stars out of 5`}
@@ -40,7 +39,7 @@ function ResourceCard(props) {
         {props.tags.map((tag, index) => {
           return (
             <li key={index}>
-              <img alt="tag" className="imageTag" src={Tag}></img>
+              <img alt="tag" className="image-tag" src={Tag}></img>
               {tag}
             </li>
           );

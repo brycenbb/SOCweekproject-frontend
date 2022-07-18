@@ -1,11 +1,8 @@
-// get the problem variables from the previous pa
-
 import React, { useState, useEffect } from 'react';
 import pic from '../../Assets/dont-panic-stars.png';
 
 function Panic3({ state }) {
   const [helpers, setHelpers] = useState([{ slackusername: '' }]);
-  //this is for lewis
   useEffect(() => {
     async function fetchHelpers() {
       let response = await fetch(
@@ -13,12 +10,11 @@ function Panic3({ state }) {
       );
       let json = await response.json();
       let dataArr = json.data;
-      console.log('dataarr', dataArr);
       setHelpers(dataArr);
     }
     fetchHelpers();
   }, [state.topic]);
-  console.log('hi', helpers);
+
   return (
     <main
       style={{

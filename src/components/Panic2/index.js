@@ -1,24 +1,22 @@
 import React from "react";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
-import pic from '../../Assets/dont-panic-stars.png'
-
+import pic from "../../Assets/dont-panic-stars.png";
 
 function Panic2({ state }) {
-
   function handleSubmit(e) {
     e.preventDefault();
     let topic = e.target.problemTopic.value;
     let problem = e.target.problemProblem.value;
     let tried = e.target.problemTried.value;
-    console.log(topic, problem, tried);
-    state({ topic: topic, problem: problem, tried: tried })
+    state({ topic: topic, problem: problem, tried: tried });
   }
 
+  /*The sx prop in some of the elements below allows styling of the MUI elements directly in JSX */
   return (
     <main className="main-panic2" style={{ backgroundImage: `url(${pic})` }}>
       <form
-        className="problemForm"
+        className="problem-form"
         onSubmit={(e) => {
           handleSubmit(e);
         }}
@@ -47,7 +45,9 @@ function Panic2({ state }) {
             placeholder="What have you tried so far?"
           ></TextField>
         </div>
-        <Button type="submit" variant="contained">Placeholder</Button>
+        <Button type="submit" variant="contained">
+          Placeholder
+        </Button>
       </form>
 
       <ol className="panic2-links">

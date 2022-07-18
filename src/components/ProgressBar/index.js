@@ -1,19 +1,13 @@
-import { useEffect, useState } from 'react';
-import LinearWithValueLabel from '../LinearProgress';
-import { useAuth0 } from '@auth0/auth0-react';
+import { useEffect, useState } from "react";
+import LinearWithValueLabel from "../LinearProgress";
+import { useAuth0 } from "@auth0/auth0-react";
+import "./ProgressBar.css";
 
-/**
- *
- * @param {*} email -> the email of the current user provided by Home
- * @returns
- */
 function ProgressBar() {
   const { user, isAuthenticated, isLoading } = useAuth0();
   const [progress, setProgress] = useState(0);
   useEffect(() => {
-    //fetch based on most recent note (highest week) and get corresponding day
-    //This needs to be changed to be what the current user note is based on their email, just place email into the fetch
-    //There are 16 weeks with 5 work days so 80 total?
+    //There are 16 weeks with 5 work days so 80 days is used as the full length of the bootcamp
     async function Fetch() {
       let res = await fetch(`http://localhost:3001/recent?email=${user.email}`);
       let json = await res.json();
@@ -29,7 +23,7 @@ function ProgressBar() {
     isAuthenticated && (
       <>
         <figure
-          className="progressBox"
+          className="progress-box"
           title={`Progress bar of School of Code completion percentage. You are ${progress}% done with the bootcamp`}
         >
           <LinearWithValueLabel progress={progress}></LinearWithValueLabel>

@@ -1,82 +1,62 @@
-// import MailIcon from '@material-ui/icons/Mail';
-// import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
-// import MapIcon from '@material-ui/icons/Map';
-import { Link } from 'react-router-dom';
-
-// Import the circular menu
+import { Link } from "react-router-dom";
 import {
   CircleMenu,
   CircleMenuItem,
   TooltipPlacement,
-} from 'react-circular-menu';
+} from "react-circular-menu";
+import "./Menu.css";
 
 function Menu() {
   return (
     <CircleMenu
-      style={{ borderColor: '#181e50' }}
-      className="circleMenu"
+      style={{ borderColor: "#181e50" }}
+      className="circle-menu"
       startAngle={-10}
       rotationAngle={150}
       itemSize={3.2}
       radius={7.2}
-      /**
-       * rotationAngleInclusive (default true)
-       * Whether to include the ending angle in rotation because an
-       * item at 360deg is the same as an item at 0deg if inclusive.
-       * Leave this prop for angles other than 360deg unless otherwise desired.
-       */
       rotationAngleInclusive={false}
     >
       <CircleMenuItem
-        style={{ borderColor: '#181e50' }}
-        className="linkparent"
-        // onClick={() => (window.location.href = '/settings')}
+        style={{ borderColor: "#181e50" }}
+        className="link-parent"
         tooltip="Settings"
         tooltipPlacement={TooltipPlacement.Right}
       >
-        <Link className="linkgrow" to="/settings">
+        <Link className="link-grow" to="/settings">
           Settings
         </Link>
       </CircleMenuItem>
       <CircleMenuItem
-        style={{ borderColor: '#181e50' }}
-        className="linkparent"
+        style={{ borderColor: "#181e50" }}
+        className="link-parent"
         tooltipPlacement={TooltipPlacement.Right}
-        sx={{ width: 'fit-content' }}
-        // onClick={() => {
-        //   window.location.href = '/resources';
-        // }}
+        sx={{ width: "fit-content" }}
         tooltip="Resources"
       >
-        <Link className="linkgrow" to="/resources">
+        <Link className="link-grow" to="/resources">
           Resources
         </Link>
       </CircleMenuItem>
       <CircleMenuItem
-        style={{ borderColor: '#181e50' }}
-        className="linkparent"
+        style={{ borderColor: "#181e50" }}
+        className="link-parent"
         tooltipPlacement={TooltipPlacement.Bottom}
-        sx={{ width: 'fit-content' }}
-        // onClick={() => {
-        //   window.location.href = '/diary';
-        // }}
+        sx={{ width: "fit-content" }}
         tooltip="Diary"
       >
-        <Link className="linkgrow" to="/diary">
+        <Link className="link-grow" to="/diary">
           Diary
         </Link>
       </CircleMenuItem>
       <CircleMenuItem
-        style={{ borderColor: '#181e50' }}
-        className="linkparent"
+        style={{ borderColor: "#181e50" }}
+        className="link-parent"
         tooltipPlacement={TooltipPlacement.Bottom}
-        sx={{ width: 'fit-content' }}
-        // onClick={() => {
-        //   window.location.href = '/';
-        // }}
+        sx={{ width: "fit-content" }}
         tooltip="Home"
       >
-        <Link className="linkgrow" to="/">
+        <Link className="link-grow" to="/">
           Home
         </Link>
       </CircleMenuItem>

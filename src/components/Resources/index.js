@@ -1,21 +1,22 @@
-import ResourceCard from '../ResourceCard';
-import { useState, useEffect } from 'react';
-import Button from '@mui/material/Button';
-import Select from '@mui/material/Select';
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
-import FormControl from '@mui/material/FormControl';
-import Header from '../Header';
-import Box from '@mui/material/Box';
+import ResourceCard from "../ResourceCard";
+import { useState, useEffect } from "react";
+import Button from "@mui/material/Button";
+import Select from "@mui/material/Select";
+import InputLabel from "@mui/material/InputLabel";
+import MenuItem from "@mui/material/MenuItem";
+import FormControl from "@mui/material/FormControl";
+import Header from "../Header";
+import Box from "@mui/material/Box";
+import "./Resources.css";
 
 function Resources({ header }) {
   const [data, setData] = useState([
-    { resourceid: 0, userid: 0, topicid: 0, link: '', tags: [], rating: 0 },
+    { resourceid: 0, userid: 0, topicid: 0, link: "", tags: [], rating: 0 },
   ]);
   //state for the topic dropdown
-  const [topicChoice, setTopicChoice] = useState('');
+  const [topicChoice, setTopicChoice] = useState("");
   //state changing to the topicChoice after being clicked
-  const [confirmedTopic, setConfirmedTopic] = useState('');
+  const [confirmedTopic, setConfirmedTopic] = useState("");
   // Need to figure out if we can use and where to place below variable
   // let resourceID = getTopicById(Math.floor(Math.random() * 5));
   useEffect(() => {
@@ -54,10 +55,10 @@ function Resources({ header }) {
 
   //list of topic options
   const topicOptions = [
-    { label: 'HTML', value: 1 },
-    { label: 'CSS', value: 2 },
-    { label: 'JAVASCRIPT', value: 3 },
-    { label: 'EXPRESS', value: 4 },
+    { label: "HTML", value: 1 },
+    { label: "CSS", value: 2 },
+    { label: "JAVASCRIPT", value: 3 },
+    { label: "EXPRESS", value: 4 },
   ];
 
   //___________Function serving the search button for topics__________
@@ -68,14 +69,13 @@ function Resources({ header }) {
   return (
     <>
       {header && <Header></Header>}
-      <dl className="resourcesContainer">
-        {/*create a form for input box of topics (dropdown) and a submit (search) button. DIV CONTAINER FOR CSS PURPOSES*/}
-        <div className="rectangleHeader">
+      <dl className="resources-container">
+        <div className="rectangle-header">
           <div
             style={{
-              alignSelf: 'center',
-              marginRight: '4rem',
-              marginLeft: '2rem',
+              alignSelf: "center",
+              marginRight: "4rem",
+              marginLeft: "2rem",
             }}
           >
             <h1 id="resources-heading">Resources</h1>
@@ -83,18 +83,18 @@ function Resources({ header }) {
           <Box
             id="dropdown-menu-cont"
             sx={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
             }}
           >
             <FormControl sx={{ m: 1, minWidth: 120 }} size="medium">
-              <InputLabel sx={{ alignItems: 'center' }} id="topic-label">
+              <InputLabel sx={{ alignItems: "center" }} id="topic-label">
                 Topic
               </InputLabel>
               <Select
                 variant="standard"
-                sx={{ backgroundColor: 'white' }}
+                sx={{ backgroundColor: "white" }}
                 value={topicChoice}
                 onChange={topicChangeHandler}
               >
@@ -109,14 +109,14 @@ function Resources({ header }) {
             </FormControl>
             <Button
               variant="contained"
-              id="topic-filter-butt"
+              id="topic-filter-btn"
               onClick={searchButtonHandler}
             >
               Search
             </Button>
           </Box>
-        </div>{' '}
-        <section className="allCards">
+        </div>{" "}
+        <section className="all-cards">
           {data.map((item, index) => {
             return (
               <ResourceCard

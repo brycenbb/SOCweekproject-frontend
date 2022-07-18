@@ -1,7 +1,7 @@
-import { useState, useEffect, useRef } from 'react';
-import Button from '@mui/material/Button';
-import DirectionsRunIcon from '@mui/icons-material/DirectionsRun';
-import Box from '@mui/material/Box';
+import { useState, useEffect, useRef } from "react";
+import Button from "@mui/material/Button";
+import DirectionsRunIcon from "@mui/icons-material/DirectionsRun";
+import Box from "@mui/material/Box";
 
 /**
  *
@@ -9,7 +9,7 @@ import Box from '@mui/material/Box';
  * @returns
  */
 function Timer(props) {
-  const [counter, setCounter] = useState(15);
+  const [counter, setCounter] = useState(4);
   const [btn, setbtn] = useState(false);
   const transitionBtn = useRef(false);
   useEffect(() => {
@@ -26,30 +26,31 @@ function Timer(props) {
     let min = Math.floor(counter / 60);
     let sec = counter - Math.floor(counter / 60) * 60;
     if (min < 10) {
-      min = '0' + String(min);
+      min = "0" + String(min);
     } else {
       min = String(min);
     }
     if (sec < 10) {
-      sec = '0' + String(sec);
+      sec = "0" + String(sec);
     } else {
       sec = String(sec);
     }
-    return min + ':' + sec;
+    return min + ":" + sec;
   }
 
+  /*The sx prop in the elements below allows styling of the MUI elements directly in JSX */
   return (
     <div className="timer">
-      <section id="timerSection">{configureTimer(counter)}</section>
+      <section id="timer-section">{configureTimer(counter)}</section>
 
       {btn && (
         <Box
           sx={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
           }}
-          id="moveButton"
+          id="move-button"
         >
           <DirectionsRunIcon fontSize="large"></DirectionsRunIcon>
           <Button

@@ -1,14 +1,11 @@
-import { useEffect, useState } from 'react';
-import Header from '../Header';
-// import Tag from '../../Assets/Tag.png';
-import SimpleAccordion from '../Accordian';
-import { useAuth0 } from '@auth0/auth0-react';
-import NotesForm from '../NotesForm/index.js';
-import Button from '@mui/material/Button';
+import { useEffect, useState } from "react";
+import Header from "../Header";
+import SimpleAccordion from "../Accordian";
+import { useAuth0 } from "@auth0/auth0-react";
+import NotesForm from "../NotesForm/index.js";
+import Button from "@mui/material/Button";
+import "./Diary.css";
 
-//Bug: tags in new entries are not showing
-//please
-// import NotesForm from '../NotesForm/index.js';
 /*Props: user{email} -> Email used to locate the users notes in the server */
 function Diary() {
   const [notes, setNotes] = useState([]);
@@ -36,37 +33,39 @@ function Diary() {
   return (
     <>
       <Header></Header>
-      <div id="entryButtonContainer">
+      <div id="entry-button-container">
         {isAuthenticated && (
           <Button
-            className="newEntryButton"
+            className="new-entry-button"
             variant="contained"
             onClick={() => {
               document
-                .querySelector('.modalcontainer2')
-                .classList.remove('hidden');
+                .querySelector(".notes-form-container")
+                .classList.remove("hidden");
             }}
           >
             New Entry
           </Button>
         )}
         {!isAuthenticated && (
+          /*The sx prop in the Button element allows styling of the MUI elements directly in JSX */
           <Button
-            className="newEntryButton"
+            className="new-entry-button"
             disabled
             sx={{
-              backgroundColor: '#dcdde1',
+              backgroundColor: "#dcdde1",
             }}
             onClick={() => {
               document
-                .querySelector('.modalcontainer2')
-                .classList.remove('hidden');
+                .querySelector(".notes-form-container")
+                .classList.remove("hidden");
             }}
           >
             New Entry
           </Button>
         )}
       </div>
+      {/*arr is an in-built prop of SimpleAccordion element from Material UI framework, takes in an array*/}
       <SimpleAccordion arr={notes}></SimpleAccordion>
       <NotesForm></NotesForm>
     </>

@@ -1,3 +1,4 @@
+import "./Prompt.css";
 /**
  *
  * @param {*} props: email -> current user email given by Home
@@ -5,23 +6,22 @@
  */
 function Prompt(props) {
   return (
-    <div className="modalcontainer">
-      {/* The div below needs to be deleted at some point when styling is complete */}
+    <div className="prompt-container">
       <div
         onClick={() => {
-          document.querySelector('.modalcontainer').classList.add('hidden');
+          document.querySelector(".prompt-container").classList.add("hidden");
         }}
       >
         Working
       </div>
-      <p id="welcomeText">
+      <p id="welcome-text">
         Welcome to our site. The big red button in the bottom right is the Panic
         Button - press it if you want to ask for help!
       </p>
-      <p style={{ height: '1rem' }}></p>
-      <label htmlFor="name_input"> Please enter your slack username:</label>
+      <p style={{ height: "1rem" }}></p>
+      <label htmlFor="name-input"> Please enter your slack username:</label>
       <input
-        name="name_input"
+        name="name-input"
         id="username"
         type="text"
         placeholder="Slack username"
@@ -29,14 +29,13 @@ function Prompt(props) {
 
       <button
         onClick={async () => {
-          //post to server/db with email and username and then hide the prompt form
-          let username = document.getElementById('username').value;
-          document.getElementById('username').value = '';
-          document.querySelector('.modalcontainer').classList.add('hidden');
-          await fetch('http://localhost:3001/users', {
-            method: 'POST',
+          let username = document.getElementById("username").value;
+          document.getElementById("username").value = "";
+          document.querySelector(".prompt-container").classList.add("hidden");
+          await fetch("http://localhost:3001/users", {
+            method: "POST",
             headers: {
-              'Content-Type': 'application/json',
+              "Content-Type": "application/json",
             },
             body: JSON.stringify({
               email: props.email,
