@@ -1,15 +1,15 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 import {
   CircleMenu,
   CircleMenuItem,
   TooltipPlacement,
-} from "react-circular-menu";
-import "./Menu.css";
+} from 'react-circular-menu';
+import './Menu.css';
 
 function Menu() {
   return (
     <CircleMenu
-      style={{ borderColor: "#181e50" }}
+      style={{ borderColor: '#181e50' }}
       className="circle-menu"
       startAngle={-10}
       rotationAngle={150}
@@ -18,7 +18,7 @@ function Menu() {
       rotationAngleInclusive={false}
     >
       <CircleMenuItem
-        style={{ borderColor: "#181e50" }}
+        style={{ borderColor: '#181e50' }}
         className="link-parent"
         tooltip="Settings"
         tooltipPlacement={TooltipPlacement.Right}
@@ -28,10 +28,10 @@ function Menu() {
         </Link>
       </CircleMenuItem>
       <CircleMenuItem
-        style={{ borderColor: "#181e50" }}
+        style={{ borderColor: '#181e50' }}
         className="link-parent"
         tooltipPlacement={TooltipPlacement.Right}
-        sx={{ width: "fit-content" }}
+        sx={{ width: 'fit-content' }}
         tooltip="Resources"
       >
         <Link className="link-grow" to="/resources">
@@ -39,10 +39,10 @@ function Menu() {
         </Link>
       </CircleMenuItem>
       <CircleMenuItem
-        style={{ borderColor: "#181e50" }}
+        style={{ borderColor: '#181e50' }}
         className="link-parent"
         tooltipPlacement={TooltipPlacement.Bottom}
-        sx={{ width: "fit-content" }}
+        sx={{ width: 'fit-content' }}
         tooltip="Diary"
       >
         <Link className="link-grow" to="/diary">
@@ -50,10 +50,10 @@ function Menu() {
         </Link>
       </CircleMenuItem>
       <CircleMenuItem
-        style={{ borderColor: "#181e50" }}
+        style={{ borderColor: '#181e50' }}
         className="link-parent"
         tooltipPlacement={TooltipPlacement.Bottom}
-        sx={{ width: "fit-content" }}
+        sx={{ width: 'fit-content' }}
         tooltip="Home"
       >
         <Link className="link-grow" to="/">

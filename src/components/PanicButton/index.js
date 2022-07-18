@@ -1,18 +1,18 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
-import Hints from "../Hints";
-import Timer from "../Timer";
-import Panic2 from "../Panic2";
-import pic from "../../Assets/dont-panic-stars.png";
-import Panic3 from "../Panic3";
-import "./PanicButton.css";
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import Hints from '../Hints';
+import Timer from '../Timer';
+import Panic2 from '../Panic2';
+import pic from '../../Assets/dont-panic-stars.png';
+import Panic3 from '../Panic3';
+import './PanicButton.css';
 
 function PanicButton() {
   const [version, setVersion] = useState(1);
   const [inputValues, setInputValues] = useState({
-    topic: "",
-    problem: "",
-    tried: "",
+    topic: '',
+    problem: '',
+    tried: '',
   });
 
   if (version === 1) {

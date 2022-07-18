@@ -1,7 +1,7 @@
-import React from "react";
-import Hint from "../Hint";
-import hintList from "./hintList";
-import "./Hints.css";
+import React from 'react';
+import Hint from '../Hint';
+import hintList from './hintList';
+import './Hints.css';
 
 function Hints() {
   return (

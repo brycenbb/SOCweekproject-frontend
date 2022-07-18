@@ -1,7 +1,7 @@
-import { useAuth0 } from "@auth0/auth0-react";
-import React from "react";
-import Avatar from "@mui/material/Avatar";
-import "./Profile.css";
+import { useAuth0 } from '@auth0/auth0-react';
+import React from 'react';
+import Avatar from '@mui/material/Avatar';
+import './Profile.css';
 /**
  *
  * @param {*} props: Slackusername given from Home.
@@ -17,11 +17,11 @@ const Profile = (props) => {
     isAuthenticated && (
       <div id="profile-container">
         <h2 id="profile-name">
-          {" "}
+          {' '}
           <Avatar
             sx={{
-              width: "5rem",
-              height: "5rem",
+              width: '5rem',
+              height: '5rem',
             }}
             alt="Me"
             src={user.picture}

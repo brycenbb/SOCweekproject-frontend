@@ -1,7 +1,7 @@
-import { useState, useEffect, useRef } from "react";
-import Button from "@mui/material/Button";
-import DirectionsRunIcon from "@mui/icons-material/DirectionsRun";
-import Box from "@mui/material/Box";
+import { useState, useEffect, useRef } from 'react';
+import Button from '@mui/material/Button';
+import DirectionsRunIcon from '@mui/icons-material/DirectionsRun';
+import Box from '@mui/material/Box';
 
 /**
  *
@@ -26,16 +26,16 @@ function Timer(props) {
     let min = Math.floor(counter / 60);
     let sec = counter - Math.floor(counter / 60) * 60;
     if (min < 10) {
-      min = "0" + String(min);
+      min = '0' + String(min);
     } else {
       min = String(min);
     }
     if (sec < 10) {
-      sec = "0" + String(sec);
+      sec = '0' + String(sec);
     } else {
       sec = String(sec);
     }
-    return min + ":" + sec;
+    return min + ':' + sec;
   }
 
   /*The sx prop in the elements below allows styling of the MUI elements directly in JSX */
@@ -46,9 +46,9 @@ function Timer(props) {
       {btn && (
         <Box
           sx={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
           }}
           id="move-button"
         >

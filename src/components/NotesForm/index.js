@@ -1,15 +1,15 @@
-import "./NotesForm.css";
-import { useState } from "react";
-import { useAuth0 } from "@auth0/auth0-react";
-import TextField from "@mui/material/TextField";
-import Select from "@mui/material/Select";
-import MenuItem from "@mui/material/MenuItem";
-import Button from "@mui/material/Button";
+import './NotesForm.css';
+import { useState } from 'react';
+import { useAuth0 } from '@auth0/auth0-react';
+import TextField from '@mui/material/TextField';
+import Select from '@mui/material/Select';
+import MenuItem from '@mui/material/MenuItem';
+import Button from '@mui/material/Button';
 
 export default function NotesForm() {
   //Form submission function that reads each input type and adds it to the object to be sent to the server if needed.
 
-  const [topicValue, setTopicValue] = useState("");
+  const [topicValue, setTopicValue] = useState('');
   const { user } = useAuth0();
 
   //function changing topicValue when dropdown value changes
@@ -20,24 +20,24 @@ export default function NotesForm() {
   async function handleSubmission(e) {
     e.preventDefault();
 
-    document.querySelector(".notes-form-container").classList.add("hidden");
+    document.querySelector('.notes-form-container').classList.add('hidden');
     let noteObj = {
       tags: [],
-      week: document.getElementById("week-input").value,
-      day: document.getElementById("day-input").value,
-      note: document.getElementById("noteArea").value,
+      week: document.getElementById('week-input').value,
+      day: document.getElementById('day-input').value,
+      note: document.getElementById('noteArea').value,
     };
 
     let newResourceObj = {
       topicID: topicValue,
       tags: [],
-      link: document.getElementById("resources-input").value,
+      link: document.getElementById('resources-input').value,
       rating: 3,
     };
 
     //Grabs the 6 current tags to idenitfy checked status. happy to help checkbox is also included but
     //is ignored as is handled later.
-    let tagArr = document.getElementsByClassName("tag-checkbox");
+    let tagArr = document.getElementsByClassName('tag-checkbox');
 
     for (let i = 0; i < tagArr.length - 1; i++) {
       if (tagArr[i].checked) {
@@ -48,37 +48,37 @@ export default function NotesForm() {
 
     //All elements have been searched, ready to post the data to the server and database.
     await fetch(`http://localhost:3001/notes?email=${user.email}`, {
-      method: "POST",
+      method: 'POST',
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
       },
       body: JSON.stringify(noteObj),
     });
 
-    if (document.getElementById("resources-input").value !== "") {
+    if (document.getElementById('resources-input').value !== '') {
       await fetch(`http://localhost:3001/resource`, {
-        method: "POST",
+        method: 'POST',
         headers: {
-          "Content-Type": "application/json",
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify(newResourceObj),
       });
     }
-    if (document.getElementById("happy-to-help-input").checked) {
+    if (document.getElementById('happy-to-help-input').checked) {
       await fetch(`http://localhost:3001/help?email=${user.email}`, {
-        method: "POST",
+        method: 'POST',
         headers: {
-          "Content-Type": "application/json",
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify(newResourceObj),
       });
     }
     //Resets form and then reloads page
-    document.querySelector("#notes-input-field").reset();
+    document.querySelector('#notes-input-field').reset();
     window.location.reload();
   }
   function hideForm() {
-    document.querySelector(".notes-form-container").classList.add("hidden");
+    document.querySelector('.notes-form-container').classList.add('hidden');
   }
 
   /*The sx prop in the elements below allows styling of the MUI elements directly in JSX */
@@ -97,9 +97,9 @@ export default function NotesForm() {
               <TextField
                 label="Week:"
                 variant="outlined"
-                inputProps={{ min: "1", max: "16", step: "1" }}
+                inputProps={{ min: '1', max: '16', step: '1' }}
                 size="small"
-                sx={{ width: "20%", backgroundColor: "white" }}
+                sx={{ width: '20%', backgroundColor: 'white' }}
                 type="number"
                 id="week-input"
                 required
@@ -111,8 +111,8 @@ export default function NotesForm() {
                 label="Day:"
                 variant="outlined"
                 size="small"
-                inputProps={{ min: "1", max: "5", step: "1" }}
-                sx={{ width: "20%", backgroundColor: "white" }}
+                inputProps={{ min: '1', max: '5', step: '1' }}
+                sx={{ width: '20%', backgroundColor: 'white' }}
                 id="day-input"
                 type="number"
                 min={1}
@@ -128,7 +128,7 @@ export default function NotesForm() {
               </label>
               <Select
                 id="topic"
-                sx={{ width: 150, backgroundColor: "white" }}
+                sx={{ width: 150, backgroundColor: 'white' }}
                 onChange={handleDropdownChange}
                 value={topicValue}
               >
@@ -223,7 +223,7 @@ export default function NotesForm() {
               </label>
               <TextField
                 variant="standard"
-                sx={{ background: "white" }}
+                sx={{ background: 'white' }}
                 type="url"
                 placeholder="  https://example.com"
                 pattern="https://.*"
@@ -234,7 +234,7 @@ export default function NotesForm() {
 
           <div id="right-col-NotesForm">
             <TextField
-              sx={{ width: "90%", background: "white" }}
+              sx={{ width: '90%', background: 'white' }}
               label="Your Notes:"
               multiline
               rows={20}

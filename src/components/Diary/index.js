@@ -1,10 +1,10 @@
-import { useEffect, useState } from "react";
-import Header from "../Header";
-import SimpleAccordion from "../Accordian";
-import { useAuth0 } from "@auth0/auth0-react";
-import NotesForm from "../NotesForm/index.js";
-import Button from "@mui/material/Button";
-import "./Diary.css";
+import { useEffect, useState } from 'react';
+import Header from '../Header';
+import SimpleAccordion from '../Accordian';
+import { useAuth0 } from '@auth0/auth0-react';
+import NotesForm from '../NotesForm/index.js';
+import Button from '@mui/material/Button';
+import './Diary.css';
 
 /*Props: user{email} -> Email used to locate the users notes in the server */
 function Diary() {
@@ -40,8 +40,8 @@ function Diary() {
             variant="contained"
             onClick={() => {
               document
-                .querySelector(".notes-form-container")
-                .classList.remove("hidden");
+                .querySelector('.notes-form-container')
+                .classList.remove('hidden');
             }}
           >
             New Entry
@@ -53,12 +53,12 @@ function Diary() {
             className="new-entry-button"
             disabled
             sx={{
-              backgroundColor: "#dcdde1",
+              backgroundColor: '#dcdde1',
             }}
             onClick={() => {
               document
-                .querySelector(".notes-form-container")
-                .classList.remove("hidden");
+                .querySelector('.notes-form-container')
+                .classList.remove('hidden');
             }}
           >
             New Entry

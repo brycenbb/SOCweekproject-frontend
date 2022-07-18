@@ -1,11 +1,11 @@
-import "./App.css";
-import PanicButton from "../PanicButton/index.js";
-import Resources from "../Resources/index.js";
-import Settings from "../Settings/index.js";
-import ProtectedRoute from "../ProtectedRoute";
-import Home from "../Home/index.js";
-import Diary from "../Diary";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import './App.css';
+import PanicButton from '../PanicButton/index.js';
+import Resources from '../Resources/index.js';
+import Settings from '../Settings/index.js';
+import ProtectedRoute from '../ProtectedRoute';
+import Home from '../Home/index.js';
+import Diary from '../Diary';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 /*
   This component serves all of the routes of the application. Information on the tech stack can be found

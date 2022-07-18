@@ -1,30 +1,30 @@
-import Tag from "../../Assets/Tag.png";
-import video from "../../Assets/video.png";
-import image from "../../Assets/image.png";
-import notes from "../../Assets/notes.png";
-import star from "../../Assets/star.svg";
+import Tag from '../../Assets/Tag.png';
+import video from '../../Assets/video.png';
+import image from '../../Assets/image.png';
+import notes from '../../Assets/notes.png';
+import star from '../../Assets/star.svg';
 let resourceImage;
 
 function ResourceCard(props) {
-  if (props.tags.includes("video")) {
+  if (props.tags.includes('video')) {
     resourceImage = video;
-  } else if (props.tags.includes("image")) {
+  } else if (props.tags.includes('image')) {
     resourceImage = image;
-  } else if (props.tags.includes("article")) {
+  } else if (props.tags.includes('article')) {
     resourceImage = notes;
   }
 
   return (
     <section className="resource-card">
       <div className="top-card">
-        {" "}
+        {' '}
         <img
           className="resource-image"
           src={resourceImage}
           alt="resource type logo"
-        ></img>{" "}
+        ></img>{' '}
         <a target="_blank" rel="noreferrer" className="title" href={props.link}>
-          {props.link.slice(0, 30) + "..."}
+          {props.link.slice(0, 30) + '...'}
         </a>
         <div
           id="rating"
