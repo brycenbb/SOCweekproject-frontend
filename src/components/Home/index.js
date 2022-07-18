@@ -22,7 +22,7 @@ function Home() {
   useEffect(() => {
     async function Fetch() {
       let response = await fetch(
-        `http://localhost:3001/users?email=${user.email}`
+        `${process.env.REACT_APP_BACKEND_URL}/users?email=${user.email}`
       );
       let json = await response.json();
       let dataArr = json.data;

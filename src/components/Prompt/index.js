@@ -32,7 +32,7 @@ function Prompt(props) {
           let username = document.getElementById('username').value;
           document.getElementById('username').value = '';
           document.querySelector('.prompt-container').classList.add('hidden');
-          await fetch('http://localhost:3001/users', {
+          await fetch(`${process.env.REACT_APP_BACKEND_URL}/users`, {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',

@@ -47,16 +47,19 @@ export default function NotesForm() {
     }
 
     //All elements have been searched, ready to post the data to the server and database.
-    await fetch(`http://localhost:3001/notes?email=${user.email}`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(noteObj),
-    });
+    await fetch(
+      `${process.env.REACT_APP_BACKEND_URL}/notes?email=${user.email}`,
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(noteObj),
+      }
+    );
 
     if (document.getElementById('resources-input').value !== '') {
-      await fetch(`http://localhost:3001/resource`, {
+      await fetch(`${process.env.REACT_APP_BACKEND_URL}/resource`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -65,13 +68,16 @@ export default function NotesForm() {
       });
     }
     if (document.getElementById('happy-to-help-input').checked) {
-      await fetch(`http://localhost:3001/help?email=${user.email}`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(newResourceObj),
-      });
+      await fetch(
+        `${process.env.REACT_APP_BACKEND_URL}/help?email=${user.email}`,
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(newResourceObj),
+        }
+      );
     }
     //Resets form and then reloads page
     document.querySelector('#notes-input-field').reset();

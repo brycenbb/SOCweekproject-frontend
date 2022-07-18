@@ -23,7 +23,9 @@ function Resources({ header }) {
     // function to fetch the data from the database initially
     async function Fetch() {
       let math = Math.floor(Math.random() * 2) + 1;
-      let response = await fetch(`http://localhost:3001/resource/${math}`);
+      let response = await fetch(
+        `${process.env.REACT_APP_BACKEND_URL}/resource/${math}`
+      );
       let json = await response.json();
       let dataArr = json.data;
 
@@ -37,7 +39,7 @@ function Resources({ header }) {
     // function to fetch the data from the database
     async function Fetch() {
       let response = await fetch(
-        `http://localhost:3001/resource/${confirmedTopic}`
+        `${process.env.REACT_APP_BACKEND_URL}/resource/${confirmedTopic}`
       );
       let json = await response.json();
       let dataArr = json.data;

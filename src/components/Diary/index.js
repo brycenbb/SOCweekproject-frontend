@@ -16,7 +16,9 @@ function Diary() {
   */
   useEffect(() => {
     async function Fetch() {
-      let res = await fetch(`http://localhost:3001/notes?email=${user.email}`);
+      let res = await fetch(
+        `${process.env.REACT_APP_BACKEND_URL}/notes?email=${user.email}`
+      );
       let json = await res.json();
       let dataArr = json.data;
       setNotes(dataArr);

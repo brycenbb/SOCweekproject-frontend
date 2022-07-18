@@ -6,7 +6,7 @@ function Panic3({ state }) {
   useEffect(() => {
     async function fetchHelpers() {
       let response = await fetch(
-        `http://localhost:3001/help?topic=${state.topic}`
+        `${process.env.REACT_APP_BACKEND_URL}/help?topic=${state.topic}`
       );
       let json = await response.json();
       let dataArr = json.data;
