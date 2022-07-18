@@ -12,6 +12,8 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
   in the README.
 */
 function App() {
+  let url = process.env.REACT_APP_BACKEND_URL || 'none';
+  console.log(url);
   return (
     <Router>
       <Routes>
