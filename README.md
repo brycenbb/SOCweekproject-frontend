@@ -1,70 +1,93 @@
-# Getting Started with Create React App
+# BOOTCAMP ADIUTOR
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A centralised database for bootcampers to take notes, share resources, and receive help with a built in debugging tool. Built with React, JavaScript, Material UI, Auth0 and Css. Tested with jest, supertest and cypress. 
 
-## Available Scripts
+## Disclaimer:
+This project was completed in a group of 4 as part of a 4 day project week during the School of Code bootcamp. I myself independently implemented react router, user authenitcation through auth0, directed the use of Material UI, refined the backend server and database code, and provided general assistance to my team members as a problem solver/debugger. 
 
-In the project directory, you can run:
+## Project Status
+This project is currently in development. Users can view and add entries to their diary, look for resources on specific topics, use the panic button to debug their code step by step and be given a list of names of people that are happy to help with a given topic.
 
-### `npm start`
+## Project Screen Shots
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Main Page:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<img src="https://user-images.githubusercontent.com/104023970/176168071-6a5f5480-92b4-4222-9c7d-fed646917e1d.PNG" width="400" height="auto">
 
-### `npm test`
+Resources feature:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<img src="https://user-images.githubusercontent.com/104023970/176168091-b80685e6-4a20-41fc-a775-73e0fff66e1b.PNG" width="400" height="auto">
 
-### `npm run build`
+Diary feature:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<img src="https://user-images.githubusercontent.com/104023970/176168120-92e3dd7f-788f-4a5f-9033-2bfeff86aecc.PNG" width="400" height="auto">
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Diary form:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<img src="https://user-images.githubusercontent.com/104023970/176168131-7b43e3ab-35f0-496c-9ba5-b22231766d69.PNG" width="400" height="auto">
 
-### `npm run eject`
+## Installation and Setup Instructions
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+To get the full experience of the app on your computer, first go to my backend code at [SOCweekproject-backend](https://github.com/brycenbb/SOCweekproject-backend) and follow installation instructions there to set up your server and database. Log in functionality can be completed by setting up a SPA with auth0 by following the first two steps [here](https://auth0.com/docs/quickstart/spa/react/01-login#install-the-auth0-react-sdk=)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Clone down this repository. You will need node and npm installed on your machine.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Installation:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+npm install
 
-## Learn More
+### To Run Test Suite:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+npm test
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### To Start the App:
 
-### Code Splitting
+npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### To Visit App:
 
-### Analyzing the Bundle Size
+localhost:3000
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Reflection
+We identified two major problems for bootcampers of School of Code: a lack of long term note storage kept in a centralised database, and a lack of a concrete system for debugging and then asking for help. 
 
-### Making a Progressive Web App
+We decided to create a one-stop-shop app for bootcampers to take notes, share resources, and receive help with a built in debugging tool.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+The biggest challange while developing this project was the short timeframe of 5 days given to complete it, as well as independent project management that turned out to be more challanging than expected. Trello, Miro and Jamboard proved to be invaluable help to organise our workflow and complete the task on time. Trello was particularly useful for creation and distribution of tickets.
 
-### Advanced Configuration
+## Tech stack used for this project:
+- React
+- [React router](https://reactrouter.com/)
+- Javascript
+- Heroku
+- Postgress
+- CSS
+- [Material UI](https://mui.com/)
+- [Express](https://expressjs.com/)
+- [Auth0](https://auth0.com/)
+- [Jest](https://jestjs.io/)
+- [Supertest](https://www.npmjs.com/package/supertest)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+We decided to use React due to it's flexibility as well as becasue it was the framework most familiar to all the team members. We supported it with Auth0 API to allow users to log-in securely. Material UI allowed us to implement well designed elements quickly which was a big factor in finishing the project on time. As with react, our choice of testing tools like Jest and Supertest relied on their flexibility and familiarity. On the backend we used PostgreSQL in tandem with Heroku because of their simplicity and cost-free implementation, it allowed us to deploy the server and databases for free with enough database storage capacity for our app's needs.
 
-### Deployment
+_____________________________________________________________________________________________________________________________________________________
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Project Brief from School of Code:
 
-### `npm run build` fails to minify
+National Bootcamp - Week Nine Project Brief
+For your project, you’ll be using what you’ve learned on the course so far to try and improve the lives of your users. In this case, the users will be close to home: bootcampers!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+To do this, you’ll need to take the time to understand your user (a bootcamper), their experiences, and their problems. Specifically, it might be good to focus on how to enhance the remote experience of a bootcamper, or what can help them with the vast amount of learning there is to do as a new developer. What do they need? What problem might they have that your application could solve for them? How can you get into the mindset of your user and keep them at the centre of your problem-solving?
+
+The high level outcomes from this project should be:
+
+A minimum viable product (MVP) showcasing an innovative full stack application which meets the user need you’ve identified
+A presentation, complete with how you worked as a team and a demonstration of the project
+Your project application might include the following:
+
+Include a user experience created in React
+Build a REST API which is used by your front-end
+Be supported by a Postgresql database with multiple tables
+Be built and managed in an agile way
+Utilise testing for ensuring robust code
+Remember, you only have a few days to code a solution, so being agile is key. That means brainstorming what you want to build, and working in sprints to deliver value each time. After each sprint, you can reassess and either continue on course or iterate towards a better solution. Have a plan which is incremental steps, rather than all or nothing.
