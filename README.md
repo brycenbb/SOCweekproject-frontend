@@ -1,7 +1,8 @@
 # BOOTCAMP ADIUTOR
 
 A centralised database for bootcampers to take notes, share resources, and receive help with a built in debugging tool. Built with React, JavaScript, Material UI, Auth0 and Css. Tested with jest, supertest and cypress. 
-
+## Live Link
+[here](https://frabjous-bonbon-a6e839.netlify.app/)
 ## Disclaimer:
 This project was completed in a group of 4 as part of a 4 day project week during the School of Code bootcamp. I myself independently implemented react router, user authenitcation through auth0, directed the use of Material UI, refined the backend server and database code, and provided general assistance to my team members as a problem solver/debugger. 
 
